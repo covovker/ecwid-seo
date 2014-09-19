@@ -8,4 +8,4 @@ run.php: the code that actually runs the processing. Since the original script p
 build.php: compiles all files into one. php build.php > ecwid_ajax_indexing.php produces a compiled file with that name
 
 
-PHPUnit tests are based on my demo store. In tests/common_includes.php you can switch between testing a compiled version or separate files. Note that you can not run all tests at once for a compiled version since it produces "Cannot redeclare function" errors
+tests/ are simple PHPUnit tests based on my demo store data. They do not cover all functionality now, the purpose for them was to make sure nothing crashes while performing the changes. In tests/common_includes.php you can switch between testing a compiled version or separate files. Note that you can not run all tests at once for a compiled version since it produces "Cannot redeclare function" errors
