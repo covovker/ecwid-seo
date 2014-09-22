@@ -77,10 +77,10 @@ class EcwidCatalog
 					if (trim($attribute['value']) != '') {
 						$return .= $this->_l('<div class="ecwid_catalog_product_attribute">', 1);
 
-						$attr_string = $attribute['name'] . ':';
+						$attr_string = EcwidPlatform::esc_html($attribute['name']) . ':';
 
 						if (isset($attribute['internalName']) && $attribute['internalName'] == 'Brand') {
-							$attr_string .= '<span itemprop="brand">' . $attribute['value'] . '</span>';
+							$attr_string .= '<span itemprop="brand">' . EcwidPlatform::esc_html($attribute['value']) . '</span>';
 						} else {
 							$attr_string .= $attribute['value'];
 						}
